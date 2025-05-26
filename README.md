@@ -7,3 +7,9 @@ The following validations will be supported:
 * Required field
 * Is email valid.
 * Minimum and Maximum length.
+
+To manually lint files in src folder run:
+
+```
+npx lint-staged
+```
