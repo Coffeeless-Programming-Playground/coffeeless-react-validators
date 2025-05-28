@@ -8,11 +8,15 @@
     "allowJs": true,
     "baseUrl": "src",
     "strictNullChecks": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "paths": {
       "@errors/*": ["errors/*"],
       "@protocols/*": ["protocols/*"],
       "@validators/*": ["validators/*"]
     },
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["**/*.spec.ts"]
 }

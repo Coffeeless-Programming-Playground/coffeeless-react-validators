@@ -1,0 +1,17 @@
+{
+  "name": "coffeeless validator example",
+  "version": "1.0.0",
+  "description": "This is an example of how to use coffeeless validator on JavaSript/TypeScript applications",
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "coffeeless-validator": "^1.0.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1"
+  }
+}
