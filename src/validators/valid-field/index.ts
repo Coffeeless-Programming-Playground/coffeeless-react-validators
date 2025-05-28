@@ -17,7 +17,7 @@ export class ValidFieldValidation implements FieldValidation {
    * @param field The field name being validated
    * @returns InvalidFieldError | null
    */
-  validate(inputValue: any, field?: string): Error | null {
+  validate(inputValue: any, field: string): Error | null {
     if (inputValue && !this.pattern.test(inputValue)) {
       this.error = new InvalidFieldError(field, this.message)
     }

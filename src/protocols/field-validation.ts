@@ -11,5 +11,5 @@ export interface FieldValidation {
    * @param inputValue The input value to validate.
    * @param field The name of the field to validate.
    */
-  validate: (inputValue: any, field?: string) => Error | null
+  validate: (inputValue: any, field: string) => Error | null
 }
