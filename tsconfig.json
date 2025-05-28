@@ -1,12 +1,18 @@
 {
   "compilerOptions": {
     "outDir": "./dist",
+    "target": "es6",
+    "lib": ["esnext"],
     "module": "commonjs",
-    "target": "es2019",
     "esModuleInterop": true,
     "allowJs": true,
     "baseUrl": "src",
     "strictNullChecks": true,
+    "paths": {
+      "@errors/*": ["errors/*"],
+      "@protocols/*": ["protocols/*"],
+      "@validators/*": ["validators/*"]
+    },
   },
   "include": ["src"]
 }
