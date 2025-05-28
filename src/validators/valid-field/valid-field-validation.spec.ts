@@ -30,4 +30,17 @@ describe('ValidFieldValidation', () => {
     const error = sut.validate('123df', field)
     expect(error).toBeFalsy()
   })
+
+  /**
+   * This test acts as the user fixing a validation error through a form input update.
+   */
+  test('Should return error first and then falsy is value is valid', () => {
+    sut = new ValidFieldValidation(pattern)
+    let error = sut.validate(faker.random.alphaNumeric(4), field)
+    expect(error).toEqual(new InvalidFieldError(field))
+    expect(error?.message).toBe(`${field} is invalid`)
+
+    error = sut.validate('123df', field)
+    expect(error).toBeFalsy()
+  })
 })

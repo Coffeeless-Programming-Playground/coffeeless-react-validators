@@ -17,9 +17,8 @@ export class RequiredFieldValidation implements FieldValidation {
    * @returns RequiredFieldError | null
    */
   validate(inputValue: any, field: string): Error | null {
-    if (!inputValue) {
-      this.error = new RequiredFieldError(field, this.message)
-    }
-    return this.error
+    return !inputValue
+      ? (this.error = new RequiredFieldError(field, this.message))
+      : (this.error = null)
   }
 }

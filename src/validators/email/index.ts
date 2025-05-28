@@ -18,9 +18,8 @@ export class Emailvalidation implements FieldValidation {
    */
   validate(inputValue: string, field: string): Error | null {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/g
-    if (!regex.test(inputValue)) {
-      this.error = new EmailFieldError(field, this.message)
-    }
-    return this.error
+    return !regex.test(inputValue)
+      ? (this.error = new EmailFieldError(field, this.message))
+      : (this.error = null)
   }
 }

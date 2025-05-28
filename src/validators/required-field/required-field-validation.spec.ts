@@ -28,4 +28,16 @@ describe('RequiredFieldValidation', () => {
     const error = sut.validate(faker.random.word(), field)
     expect(error).toBeFalsy()
   })
+
+  /**
+   * This test acts as the user fixing a validation error through a form input update.
+   */
+  test('Should return error first and then falsy if field is not empty', () => {
+    let error = sut.validate('', field)
+    expect(error).toEqual(new RequiredFieldError(field))
+    expect(error?.message).toBe(`${field} is Required`)
+
+    error = sut.validate(faker.random.word(), field)
+    expect(error).toBeFalsy()
+  })
 })

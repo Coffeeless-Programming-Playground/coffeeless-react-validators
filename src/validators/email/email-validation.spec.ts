@@ -28,4 +28,16 @@ describe('EmailValidation', () => {
     const error = sut.validate('dominicsc2hs@gmail.com', field)
     expect(error).toBeFalsy()
   })
+
+  /**
+   * This test acts as the user fixing a validation error through a form input update.
+   */
+  test('Should return error first and then falsy when email is valid', () => {
+    let error = sut.validate(faker.random.word(), field)
+    expect(error).toEqual(new EmailFieldError(field))
+    expect(error?.message).toBe(`${field} is not valid`)
+
+    error = sut.validate('dominicsc2hs@gmail.com', field)
+    expect(error).toBeFalsy()
+  })
 })

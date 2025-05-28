@@ -18,9 +18,8 @@ export class ValidFieldValidation implements FieldValidation {
    * @returns InvalidFieldError | null
    */
   validate(inputValue: any, field: string): Error | null {
-    if (inputValue && !this.pattern.test(inputValue)) {
-      this.error = new InvalidFieldError(field, this.message)
-    }
-    return this.error
+    return inputValue && !this.pattern.test(inputValue)
+      ? (this.error = new InvalidFieldError(field, this.message))
+      : (this.error = null)
   }
 }

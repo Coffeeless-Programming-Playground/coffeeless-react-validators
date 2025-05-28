@@ -34,4 +34,16 @@ describe('MinLengthValidation', () => {
     const error = sut.validate(faker.random.alphaNumeric(minLength), field)
     expect(error).toBeFalsy()
   })
+
+  /**
+   * This test acts as the user fixing a validation error through a form input update.
+   */
+  test('Should return error first and then falsy if field length is equal to min length', () => {
+    let error = sut.validate(faker.random.alphaNumeric(minLength - 1), field)
+    expect(error).toEqual(new MinLengthFieldError(field, minLength))
+    expect(error?.message).toBe(`${field} must be ${minLength} characters at least`)
+
+    error = sut.validate(faker.random.alphaNumeric(minLength), field)
+    expect(error).toBeFalsy()
+  })
 })
