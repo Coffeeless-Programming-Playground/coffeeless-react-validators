@@ -9,7 +9,6 @@ export class MinLengthValidation implements FieldValidation {
     private readonly minLength: number,
     private readonly message?: string
   ) {}
-
   /**
    * Validates that the input value is equal or greater than the minLength.
    * @param inputValue The input value to validate.
