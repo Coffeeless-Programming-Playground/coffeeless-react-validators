@@ -1,5 +1,5 @@
 import { type FieldValidation } from '@protocols/field-validation'
-import { Emailvalidation } from '@validators/email'
+import { EmailValidation } from '@validators/email'
 import { MinLengthValidation } from '@validators/min-length'
 import { RequiredFieldValidation } from '@validators/required-field'
 import { ValidFieldValidation } from '@validators/valid-field'
@@ -43,7 +43,7 @@ export class ValidationBuilder {
    * @returns ValidationBuilder
    */
   email(message?: string): ValidationBuilder {
-    this.validations.push(new Emailvalidation(message))
+    this.validations.push(new EmailValidation(message))
     return this
   }
 

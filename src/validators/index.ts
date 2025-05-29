@@ -1,4 +1,5 @@
 export * from './builder/validation-builder'
+export * from './validation-composite'
 export * from './email'
 export * from './min-length'
 export * from './required-field'

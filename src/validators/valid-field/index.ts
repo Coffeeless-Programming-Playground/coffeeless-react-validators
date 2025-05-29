@@ -7,19 +7,18 @@ import { type FieldValidation } from '@protocols/field-validation'
 export class ValidFieldValidation implements FieldValidation {
   constructor(
     private readonly pattern: RegExp,
-    private readonly message?: string,
-    public error: Error | null = null
+    private readonly message?: string
   ) {}
 
   /**
    * Validates that a given input matches a regex pattern.
    * @param inputValue The input value to validate.
    * @param field The field name being validated
-   * @returns InvalidFieldError | null
+   * @returns InvalidFieldError | undefined
    */
-  validate(inputValue: any, field: string): Error | null {
-    return inputValue && !this.pattern.test(inputValue)
-      ? (this.error = new InvalidFieldError(field, this.message))
-      : (this.error = null)
+  validate(inputValue: any, field: string): Error {
+    return (
+      inputValue && !this.pattern.test(inputValue) && new InvalidFieldError(field, this.message)
+    )
   }
 }

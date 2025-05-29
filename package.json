@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "npm run clean  && tsc --p tsconfig.json && tsc-alias",
+    "build": "npm run clean  && tsc --p tsconfig.base.json && tsc-alias",
     "test": "jest --passWithNoTests --no-cache --runInBand",
     "test:staged": "npm test --findRelatedTests",
     "test:watch": "npm test -- --watch --no-cache",
@@ -25,7 +25,6 @@
     "@faker-js/faker": "^6.0.0-alpha.7",
     "@types/jest": "^27.4.1",
     "@types/node": "^20.10.0",
-    "@faker-js/faker": "^6.0.0-alpha.7",
     "eslint-config-standard-with-typescript": "^40.0.0",
     "husky": "^8.0.0",
     "jest": "^27.5.1",

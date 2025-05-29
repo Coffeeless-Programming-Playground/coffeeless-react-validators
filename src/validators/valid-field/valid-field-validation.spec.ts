@@ -6,9 +6,9 @@ describe('ValidFieldValidation', () => {
   let sut: ValidFieldValidation
   const field = faker.random.numeric()
   /**
-   * regex pattern that looks for 3 numbers followed by 2 strings.
+   * UUID regex pattern.
    */
-  const pattern = /^\d{3}[A-Za-z]{2}$/
+  const pattern = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/
 
   test('Should return error if value is invalid without custom message', () => {
     sut = new ValidFieldValidation(pattern)
@@ -27,7 +27,7 @@ describe('ValidFieldValidation', () => {
 
   test('Should return falsy is value is valid', () => {
     sut = new ValidFieldValidation(pattern)
-    const error = sut.validate('123df', field)
+    const error = sut.validate('3582e85c-9aaf-446a-ba60-d2d6caf8ab4f', field)
     expect(error).toBeFalsy()
   })
 
@@ -40,7 +40,7 @@ describe('ValidFieldValidation', () => {
     expect(error).toEqual(new InvalidFieldError(field))
     expect(error?.message).toBe(`${field} is invalid`)
 
-    error = sut.validate('123df', field)
+    error = sut.validate('3582e85c-9aaf-446a-ba60-d2d6caf8ab4f', field)
     expect(error).toBeFalsy()
   })
 })

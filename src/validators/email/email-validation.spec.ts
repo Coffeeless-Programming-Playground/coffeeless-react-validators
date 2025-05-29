@@ -1,13 +1,13 @@
 import faker from '@faker-js/faker'
 import { EmailFieldError } from '@errors/email-field-error'
-import { Emailvalidation } from '.'
+import { EmailValidation } from '.'
 
 describe('EmailValidation', () => {
-  let sut: Emailvalidation
+  let sut: EmailValidation
   const field = faker.random.word()
 
   beforeEach(() => {
-    sut = new Emailvalidation()
+    sut = new EmailValidation()
   })
 
   test('Should return error without custom message if value is invalid', () => {
@@ -18,7 +18,7 @@ describe('EmailValidation', () => {
 
   test('Should return error with custom message if value is invalid', () => {
     const customErrorMessage = 'Input field is not an email'
-    sut = new Emailvalidation(customErrorMessage)
+    sut = new EmailValidation(customErrorMessage)
     const error = sut.validate(faker.random.word(), field)
     expect(error).toEqual(new EmailFieldError(field, customErrorMessage))
     expect(error?.message).toBe(customErrorMessage)

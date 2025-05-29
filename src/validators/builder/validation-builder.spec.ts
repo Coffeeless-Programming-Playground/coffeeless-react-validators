@@ -1,5 +1,5 @@
 import faker from '@faker-js/faker'
-import { Emailvalidation } from '@validators/email'
+import { EmailValidation } from '@validators/email'
 import { MinLengthValidation } from '@validators/min-length'
 import { RequiredFieldValidation } from '@validators/required-field'
 import { ValidFieldValidation } from '@validators/valid-field'
@@ -32,13 +32,13 @@ describe('ValidationBuilder', () => {
 
   test('Should return Emailvalidation', () => {
     const validations = ValidationBuilder.init().email().build()
-    expect(validations).toEqual([new Emailvalidation()])
+    expect(validations).toEqual([new EmailValidation()])
   })
 
   test('Should return Emailvalidation with custom message', () => {
     const customErrorMessage = 'Email is not valid'
     const validations = ValidationBuilder.init().email(customErrorMessage).build()
-    expect(validations).toEqual([new Emailvalidation(customErrorMessage)])
+    expect(validations).toEqual([new EmailValidation(customErrorMessage)])
   })
 
   test('Should return ValidFieldValidation', () => {
@@ -66,7 +66,7 @@ describe('ValidationBuilder', () => {
     expect(validations).toEqual([
       new RequiredFieldValidation(),
       new MinLengthValidation(length),
-      new Emailvalidation(),
+      new EmailValidation(),
       new ValidFieldValidation(pattern)
     ])
   })
