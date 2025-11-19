@@ -1,5 +1,5 @@
 {
-  "name": "coffeeless-validator",
+  "name": "coffeeless-react-validators",
   "description": "An input validation package made with love by Coffeeless Programming",
   "version": "1.1.0",
   "main": "dist/index.js",
@@ -13,9 +13,21 @@
     "clean": "rimraf dist/",
     "prepare": "husky install"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Coffeeless-Programming-Playground/coffeeless-react-validators.git"
+  },
+  "keywords": [
+    "coffeeless",
+    "react",
+    "validation"
+  ],
+  "author": "Diego Salas Noain <dominicsc2hs@gmail.com>",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Coffeeless-Programming-Playground/coffeeless-react-validators/issues"
+  },
+  "homepage": "https://github.com/Coffeeless-Programming-Playground/coffeeless-react-validators#readme",
   "files": [
     "dist",
     "README.md",
