@@ -3,3 +3,4 @@ dist
 examples/**/*/package-lock.json
 coverage
 coffeeless-validator*
+.vscode
