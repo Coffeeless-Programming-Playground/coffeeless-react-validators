@@ -1,3 +1,12 @@
+# [1.4.0](https://github.com/Coffeeless-Programming-Playground/coffeeless-react-validators/compare/v1.3.0...v1.4.0) (2026-01-15)
+
+
+### Features
+
+* add lgpl license ([7ca6d58](https://github.com/Coffeeless-Programming-Playground/coffeeless-react-validators/commit/7ca6d58340e3a8bbc0edd1772e2bc866fd42b934))
+
+
+
 # [1.3.0](https://github.com/Coffeeless-Programming-Playground/coffeeless-react-validators/compare/v1.2.0...v1.3.0) (2026-01-15)
 
 
