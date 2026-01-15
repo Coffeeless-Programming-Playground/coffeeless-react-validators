@@ -1,5 +1,5 @@
 {
-  "name": "coffeeless-react-validators",
+  "name": "@cofp/coffeeless-react-validators",
   "description": "An input validation package made with love by Coffeeless Programming",
   "version": "1.2.0",
   "main": "dist/index.js",
