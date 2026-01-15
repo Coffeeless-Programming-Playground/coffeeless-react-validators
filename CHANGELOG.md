@@ -1,4 +1,13 @@
-# 1.2.0 (2025-11-19)
+# [1.3.0](https://github.com/Coffeeless-Programming-Playground/coffeeless-react-validators/compare/v1.2.0...v1.3.0) (2026-01-15)
+
+
+### Features
+
+* change package scope ([9c8ce88](https://github.com/Coffeeless-Programming-Playground/coffeeless-react-validators/commit/9c8ce88af6ad0c283ef218c07706e6fa8a3c50bd))
+
+
+
+# [1.2.0](https://github.com/Coffeeless-Programming-Playground/coffeeless-react-validators/compare/ad09965fb74705ea722177043001c90aa450f651...v1.2.0) (2025-11-19)
 
 
 ### Bug Fixes
